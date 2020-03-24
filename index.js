@@ -369,7 +369,9 @@ function getGermanCars(inventory) {
 function carMaker(odometerReading) {
   let odometerObj = {
     odometer: odometerReading,
-    drive: function(distance) {}
+    drive: function(distance) {
+      return (this.odometer += distance);
+    }
   };
   return odometerObj;
   /* code here */
